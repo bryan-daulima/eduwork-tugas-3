@@ -3,79 +3,239 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Biodata</title>
+  <title>Profile Biodata - Bryan Daulima</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Custom styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ============ SECTION 1: MENU ============ -->
-  <nav class="navbar">
-    <div class="brand">Brand</div>
-    <ul class="nav-links">
-      <li><a href="#header">Header</a></li>
-      <li><a href="#biodata">Biodata</a></li>
-      <li><a href="#portofolio">Portofolio</a></li>
-    </ul>
+  <!-- ============ SECTION 1: NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#header">Bryan<span class="text-warning">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#header">Header</a></li>
+          <li class="nav-item"><a class="nav-link" href="#biodata">Biodata</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portofolio">Portofolio</a></li>
+          <li class="nav-item ms-lg-2">
+            <button class="btn btn-warning btn-sm fw-semibold px-3" data-bs-toggle="modal" data-bs-target="#contactModal">
+              <i class="bi bi-envelope-fill me-1"></i>Kontak
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- ============ SECTION 2: HEADER (judul kiri, gambar kanan) ============ -->
-  <header id="header" class="header">
-    <div class="header-text">
-      <h1>Selamat Datang di Website Saya</h1>
-      <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
-      <a href="#" class="btn">Pelajari Lebih Lanjut</a>
-    </div>
-    <div class="header-image">
-      <img src="https://placehold.co/600x400/2563eb/ffffff?text=Foto+Profil" alt="Gambar Header">
+  <header id="header" class="header-section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 text-center text-lg-start">
+          <h1 class="display-5 fw-bold mb-3">Selamat Datang di Website Saya</h1>
+          <p class="lead text-secondary mb-4">
+            Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini,
+            sekarang dibangun ulang menggunakan Bootstrap agar lebih responsif.
+          </p>
+          <a href="#biodata" class="btn btn-primary btn-lg px-4">Pelajari Lebih Lanjut</a>
+        </div>
+        <div class="col-lg-6 order-first order-lg-last">
+          <img src="https://placehold.co/600x400/2563eb/ffffff?text=Foto+Profil"
+            alt="Gambar Header" class="img-fluid rounded-4 shadow">
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- ============ SECTION 3: BIODATA (6 box) ============ -->
-  <section id="biodata" class="section">
-    <div class="section-title">
-      <h2>About Me</h2>
-      <p>A brief introduction about myself</p>
-    </div>
+  <section id="biodata" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">About Me</h2>
+        <p class="text-secondary">A brief introduction about myself</p>
+      </div>
 
-    <div class="biodata-grid">
-      <div class="biodata-card"><span class="label">Full Name</span> Bryan Daulima</div>
-      <div class="biodata-card"><span class="label">Education</span> S1 Teknik Informatika</div>
-      <div class="biodata-card"><span class="label">Pekerjaan</span> Web Developer</div>
-      <div class="biodata-card"><span class="label">Contact</span> bdaulima13@gmail.com</div>
-      <div class="biodata-card"><span class="label">Hobi</span> Coding &amp; Membaca</div>
-      <div class="biodata-card"><span class="label">Alamat</span> Indonesia</div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card biodata-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <span class="biodata-label"><i class="bi bi-person-fill me-2"></i>Full Name</span>
+              <p class="mb-0">Bryan Daulima</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card biodata-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <span class="biodata-label"><i class="bi bi-mortarboard-fill me-2"></i>Education</span>
+              <p class="mb-0">S1 Teknik Informatika</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card biodata-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <span class="biodata-label"><i class="bi bi-briefcase-fill me-2"></i>Pekerjaan</span>
+              <p class="mb-0">Web Developer</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card biodata-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <span class="biodata-label"><i class="bi bi-envelope-fill me-2"></i>Contact</span>
+              <p class="mb-0">bdaulima13@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card biodata-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <span class="biodata-label"><i class="bi bi-heart-fill me-2"></i>Hobi</span>
+              <p class="mb-0">Coding &amp; Membaca</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card biodata-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <span class="biodata-label"><i class="bi bi-geo-alt-fill me-2"></i>Alamat</span>
+              <p class="mb-0">Indonesia</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ============ SECTION 4: PORTOFOLIO ============ -->
-  <section id="portofolio" class="section">
-    <div class="section-title">
-      <h2>Portofolio</h2>
-    </div>
+  <section id="portofolio" class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">Portofolio</h2>
+        <p class="text-secondary">Klik kartu untuk melihat detail proyek</p>
+      </div>
 
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <img src="https://placehold.co/350x200/f97316/ffffff?text=Proyek+1" alt="Proyek 1">
-        <h3>Proyek 1</h3>
-        <p>Deskripsi proyek 1.</p>
-      </div>
-      <div class="portfolio-card">
-        <img src="https://placehold.co/350x200/0f172a/ffffff?text=Proyek+2" alt="Proyek 2">
-        <h3>Proyek 2</h3>
-        <p>Deskripsi proyek 2.</p>
-      </div>
-      <div class="portfolio-card">
-        <img src="https://placehold.co/350x200/7c3aed/ffffff?text=Proyek+3" alt="Proyek 3">
-        <h3>Proyek 3</h3>
-        <p>Deskripsi proyek 3.</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card portfolio-card h-100 border-0 shadow-sm" role="button"
+            data-bs-toggle="modal" data-bs-target="#projectModal"
+            data-title="Proyek 1" data-img="https://placehold.co/600x350/f97316/ffffff?text=Proyek+1"
+            data-desc="Aplikasi web landing page yang dibangun dengan HTML, CSS, dan Bootstrap. Fokus pada tampilan modern dan responsif.">
+            <img src="https://placehold.co/350x200/f97316/ffffff?text=Proyek+1" class="card-img-top" alt="Proyek 1">
+            <div class="card-body text-center">
+              <h3 class="h5 text-primary-emphasis">Proyek 1</h3>
+              <p class="text-secondary mb-0">Deskripsi proyek 1.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card portfolio-card h-100 border-0 shadow-sm" role="button"
+            data-bs-toggle="modal" data-bs-target="#projectModal"
+            data-title="Proyek 2" data-img="https://placehold.co/600x350/0f172a/ffffff?text=Proyek+2"
+            data-desc="Website company profile dengan beberapa halaman dan navigasi yang rapi. Dioptimalkan untuk perangkat mobile.">
+            <img src="https://placehold.co/350x200/0f172a/ffffff?text=Proyek+2" class="card-img-top" alt="Proyek 2">
+            <div class="card-body text-center">
+              <h3 class="h5 text-primary-emphasis">Proyek 2</h3>
+              <p class="text-secondary mb-0">Deskripsi proyek 2.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card portfolio-card h-100 border-0 shadow-sm" role="button"
+            data-bs-toggle="modal" data-bs-target="#projectModal"
+            data-title="Proyek 3" data-img="https://placehold.co/600x350/7c3aed/ffffff?text=Proyek+3"
+            data-desc="Dashboard interaktif dengan komponen UI dari Bootstrap. Menampilkan data secara dinamis dan rapi.">
+            <img src="https://placehold.co/350x200/7c3aed/ffffff?text=Proyek+3" class="card-img-top" alt="Proyek 3">
+            <div class="card-body text-center">
+              <h3 class="h5 text-primary-emphasis">Proyek 3</h3>
+              <p class="text-secondary mb-0">Deskripsi proyek 3.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    &copy; 2024 Bryan Daulima. All rights reserved.
+  <footer class="custom-footer text-center text-white py-4">
+    <div class="container">
+      &copy; 2024 Bryan Daulima. All rights reserved.
+    </div>
   </footer>
 
+  <!-- ============ MODAL: KONTAK ============ -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="contactModalLabel"><i class="bi bi-envelope-fill me-2"></i>Hubungi Saya</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="namaInput" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="namaInput" placeholder="Masukkan nama Anda">
+            </div>
+            <div class="mb-3">
+              <label for="emailInput" class="form-label">Email</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="nama@email.com">
+            </div>
+            <div class="mb-3">
+              <label for="pesanInput" class="form-label">Pesan</label>
+              <textarea class="form-control" id="pesanInput" rows="3" placeholder="Tulis pesan Anda..."></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          <button type="button" class="btn btn-primary">Kirim Pesan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODAL: DETAIL PROYEK ============ -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header">
+          <h5 class="modal-title text-primary" id="projectModalLabel">Detail Proyek</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="" alt="Detail Proyek" id="projectModalImg" class="img-fluid rounded-3 mb-3">
+          <p class="text-secondary" id="projectModalDesc"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom script: isi modal detail proyek secara dinamis -->
+  <script>
+    const projectModal = document.getElementById('projectModal');
+    projectModal.addEventListener('show.bs.modal', function (event) {
+      const card = event.relatedTarget;
+      projectModal.querySelector('#projectModalLabel').textContent = card.getAttribute('data-title');
+      projectModal.querySelector('#projectModalImg').src = card.getAttribute('data-img');
+      projectModal.querySelector('#projectModalDesc').textContent = card.getAttribute('data-desc');
+    });
+  </script>
 </body>
 </html>
